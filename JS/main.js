@@ -7,8 +7,7 @@ let tel = document.getElementById("inputTelefono");
 let btnCotizar = document.getElementById("btnCotizar");
 let alertSend = document.getElementById("alertSend");
 let campoPaginas=parseInt(document.getElementById("inputPaginas").value);
-let campoTemas=parseInt(document.getElementById("inputTemas").value);
-let campoAlerta=document.getElementById("alertCotizacion");
+
 
 campoNombre.addEventListener("blur",function(e){    
     e.preventDefault();
@@ -143,20 +142,25 @@ tel.addEventListener("blur", function (e) {
 
 btnCotizar.addEventListener("click", function (e){
     e.preventDefault();
+    
+    let campoTemas=parseInt(document.getElementById("inputTemas").value);
+    let campoAlerta=document.getElementById("alertCotizacion");
 
-    if( (isNaN(campoPaginas)) || (isNaN(campoTemas)) ){
-
-        console.log("revisa paginas y temas")
-    }else{
+    if( (campoPaginas>0) && (campoTemas>0)) {
+        
         console.log(quote(campoPaginas,campoTemas).toFixed(2)); 
         campoAlerta.innerHTML="Tu cotización es de $ "+quote(campoPaginas,campoTemas).toFixed(2);
+        
+    }else{
+        
+        campoAlerta.innerHTML="ASEGURATE DE INCLUIR FECHAS Y TEMAS";
         
     }
     
  
 });//btn cotiza
 
-function quote(p,t){ 
+function quote(p,t){
     let result=(p*500)*t;
 
     return result;
