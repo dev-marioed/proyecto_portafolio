@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+       <!--custom styles-->
+       <link rel="stylesheet" href="../CSS/style.css">
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trabaja conmigo</title>
+
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top "> <!--nav bar inicio-->
+    <a class="navbar-brand" href="../index.html">Mario Networks</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PAGES/acercademi.html">Acerca de mí</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/PAGES/trabajaconmigo.html">Trabaja conmigo</a>
+        </li>
+        <!-- li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+        
+      </ul>
+      <!--busqueda
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>-->
+    </div>
+  </nav><!--nav bar fin-->
+    
+  <div class="imagen_fondo"> 
+
+    <form class="formato">
+      <h1>Escríbenos</h1>
+      <br>
+      <div class="form-group">
+        <div class="form-group-row col-md-6">
+          <label for="inputNombre">Nombre:</label>
+          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" required>
+          <small id="passwordHelpBlock" class="form-text text-muted">
+            Ejemplo: Santiago 
+          </small>
+          <div class="invalid-feedback">
+            Recuerda este campo:
+            Debe contener sólo letras (sin número o caráteres: @$-)
+            Entre 3 y 20 caracteres          
+          </div>
+        </div>
+        <div class="form-group-row col-md-6">
+          <label for="inputApellido">Apellidos:</label>
+          <input type="text" class="form-control" id="inputApellido" placeholder="Apellidos" required>
+          <small id="passwordHelpBlock" class="form-text text-muted">
+            Ejemplo: Flores 
+          </small>
+          <div class="invalid-feedback">
+            Recuerda este campo:
+            Debe contener sólo letras (sin número o caracteres: @$-)
+            Entre 3 y 50 caracteres          
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputCorreo">Correo:</label>
+          <input type="email" class="form-control" id="inputCorreo" placeholder="ejemplo@correo.com" required>
+          <small id="passwordHelpBlock" class="form-text text-muted">
+            Ejemplo: daniel.mac@gmail.com
+          </small>
+          <div class="invalid-feedback">
+            Recuerda este campo:
+            Debe contener un @
+          </div>
+          <div class="form-group col-md-6"></div>
+          <label for="inputTelefono">Número:</label>
+          <input type="tel" class="form-control" id="inputTelefono" placeholder="Teléfono a 10 digitos">
+          <small id="passwordHelpBlock" class="form-text text-muted">
+            Ejemplo: 6527482684
+          </small>
+          <div class="invalid-feedback">
+           Recuerda ingresar un número de 10 digitos
+          </div>
+  
+        </div>
+        <div class="form-group col-md-8 ">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputPaginas">¿Cuánás páginas incluye tu sitio? (costo=500 por página)</label>
+              <input type="text" class="form-control" id="inputPaginas" placeholder="# páginas">
+              </div>
+            <div class="form-group col-md-6">
+              <label for="inputTemas">¿Cuántos temas necesitas?(costo=#páginas*temas)</label>
+              <input type="text" class="form-control" id="inputTemas" placeholder="Temas">
+            </div>
+        </div><!--ROW-->
+        </div>
+        <div class="invalid-feedback">
+         ¡Recuerda dejarnos tus comentarios!
+        </div>
+  
+        <button class="button" type="button" id="btnCotizar">Cotizar</button>
+        <div id="alertSend" class="alert alert-danger" style="display: none" role="alert">
+          Alguno de los campos se encuentran vacíos, verifique por favor!
+        </div>
+  
+      </div>
+      <br>
+      
+    </form>
+    
+    <div class="alert alert-success" id="alertCotizacion" role="alert">
+      Tu cotización aparecerá aquí, recuerda especificar el número de páginas y temas que requieres.
+    </div>
+    
+
+
+  </div><!--fondo-->
+
+
+
+    
+
+      <script src="../JS/main.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+</body>
+</html>
+
